@@ -13,7 +13,7 @@ class Main {
                 double b = scanner.nextDouble();
                 double c = scanner.nextDouble();
                 double p = (a + b + c) / 2;
-                System.out.println(Math.sqrt((p * (p - a) * (p - b) * (p - c))));
+                System.out.println(Math.sqrt(p * (p - a) * (p - b) * (p - c)));
                 break;
             case "rectangle":
                 double d = scanner.nextDouble();
