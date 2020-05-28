@@ -9,7 +9,20 @@ public class Main {
      * @return true if the balance has changed, otherwise - false.
      */
     public static boolean changeBalance(Account account, Operation operation, Long sum) {
-        // write your implementation here
+        switch (operation) {
+            case DEPOSIT:
+                account.setBalance(account.getBalance() + sum);
+                return true;
+            case WITHDRAW:
+                if (account.getBalance() < sum) {
+                    System.out.println("Not enough money to withdraw.");
+                    return false;
+                } else {
+                    account.setBalance(account.getBalance() - sum);
+                    return true;
+                }
+        }
+        return false;
     }
 
     /* Do not change code below */
